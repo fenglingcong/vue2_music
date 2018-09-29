@@ -57,21 +57,7 @@ export default {
           console.log('get_banner', err)
         })
     },
-    // 获取推荐数据
-    get_recommend () {
-      this.get_recommend_data(this.page)
-        .then(res => {
-          if (res.data.length) {
-            this.recommendJson = res.data
-            this.page = 2
-          }
-          // console.log(res)
-        })
-        .catch(err => {
-          console.log('get_recommend', err)
-        })
-    },
-    // 获取更多数据
+    // 获取music数据列表
     get_recommend_more () {
       this.lock = true
       this.loading = 'loading'
@@ -79,6 +65,9 @@ export default {
         .then(res => {
           if (res.data) {
             this.recommendJson.push(...res.data)
+            if (this.page > 1) {
+              this.set_playList(this.recommendJson)
+            }
             this.page++
           } else {
             this.loading = 'nothing'
@@ -121,7 +110,7 @@ export default {
     },
     init () {
       this.get_banner()
-      this.get_recommend()
+      this.get_recommend_more()
       this.$nextTick(() => {
         $(window).on('scroll', this.onScroll)
       })
@@ -129,6 +118,7 @@ export default {
   },
   mounted () {
     this.init()
+    console.log(this.page)
   },
   // 开启keep-alive的时候进入页面钩子
   activated () {
