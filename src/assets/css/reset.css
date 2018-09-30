@@ -12,7 +12,7 @@ html,body{
 }
 body{
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-    overflow-y: initial !important; /* music-ui的自带样式会导致body出现滚动条，然后导致scrollBehavior无法获取window的滚动位置 */
+    /* overflow-y: initial !important; */ /* music-ui的自带样式会导致body出现滚动条，然后导致scrollBehavior无法获取window的滚动位置 */
 }
 img{vertical-align: top;border: 0;}
 ul, li, ol{

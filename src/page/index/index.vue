@@ -118,7 +118,6 @@ export default {
   },
   mounted () {
     this.init()
-    console.log(this.page)
   },
   // 开启keep-alive的时候进入页面钩子
   activated () {
