@@ -38,7 +38,6 @@ export default {
 #banner {
   width: 100%;
   padding: 10px;
-  height: 4.27rem;
   background-color: #e8e8e8;
   .swiper{
     width: 100%;
