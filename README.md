@@ -1,4 +1,4 @@
-# vue2_echo
+# vue2_music
 
 > 在学习vue的路上，希望可以交流
 
