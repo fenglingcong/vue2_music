@@ -6,7 +6,7 @@
 
 > QQ: 1539027251 (交流学习)
 
-##技术栈
+## 技术栈
 1. [vue](https://cn.vuejs.org/v2/guide/)
 2. [vue-router](https://router.vuejs.org/zh-cn/essentials/getting-started.html)
 3. [vuex](https://vuex.vuejs.org/zh-cn/getting-started.html)
